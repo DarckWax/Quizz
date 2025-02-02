@@ -5,15 +5,21 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="index.php?component=quizz_list">Liste des Quizz</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index.php?component=quizz_form">Créer un Quizz</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index.php?component=logout">Déconnexion</a>
-            </li>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?component=quizz_list">Liste des Quizz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?component=quizz_form">Créer un Quizz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">Déconnexion</a>
+                </li>
+            <?php else: ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php">Connexion</a>
+                </li>
+            <?php endif; ?>
         </ul>
     </div>
 </nav>
