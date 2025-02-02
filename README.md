@@ -1,0 +1,3 @@
+- Réalisation de la création de quizz ainsi que la liste des quizz
+- Problème avec la BDD pour le login au site ( Pour la connection au site j'ai créer un user qui à le rôle admin )
+- ![image](https://github.com/user-attachments/assets/1dc5654e-1c09-4d9a-a78e-934311f0e873)
