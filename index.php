@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +25,11 @@
     <?php
         require "_partials/navbar.php";
         require "Includes/functions.php"; 
+
+        if (!isset($_SESSION['user_id'])) {
+            header('Location: login.php');
+            exit();
+        }
 
         if (isset($_GET['component'])) {
             $componentName = cleanString($_GET['component']);
